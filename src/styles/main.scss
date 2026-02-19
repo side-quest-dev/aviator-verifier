@@ -1,0 +1,79 @@
+@use './variables';
+@use './header';
+@use './inputs';
+@use './result';
+@use './formula';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    padding: 0;
+}
+
+body {
+    font-family: variables.$font-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background: variables.$primary-gradient;
+    min-height: 100vh;
+    padding: variables.$spacing-xl;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: variables.$color-bg-white;
+    border-radius: variables.$radius-xl;
+    box-shadow: variables.$shadow-lg;
+    overflow: hidden;
+}
+
+.content {
+    padding: variables.$spacing-2xl;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .app {
+    padding: variables.$spacing-md;
+  }
+
+  .content {
+    padding: variables.$spacing-xl;
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .result-box .crash-result {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: variables.$spacing-xl;
+  }
+
+  .content {
+    padding: variables.$spacing-lg;
+  }
+
+  .input-section {
+    gap: variables.$spacing-lg;
+  }
+
+  .result-box .crash-result {
+    font-size: 2.5em;
+  }
+}

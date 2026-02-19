@@ -1,0 +1,60 @@
+@use './variables';
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-xl;
+}
+
+.input-group {
+    label {
+        display: block;
+        margin-bottom: variables.$spacing-xl;
+        color: variables.$color-text-dark;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px variables.$spacing-lg;
+        border: 2px solid variables.$color-border;
+        border-radius: variables.$radius-md;
+        font-size: 1em;
+        font-family: variables.$font-mono;
+        transition:  all variables.$transition-normal;
+
+        &:focus {
+            outline: none;
+            border-color: variables.$color-primary;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+}
+
+.btn-verify {
+    width: 100%;
+    padding: variables.$spacing-lg;
+    background: variables.$primary-gradient;
+    color: variables.$color-text-white;
+    border: none;
+    border-radius: variables.$radius-md;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform variables.$transition-fast, box-shadow variables.$transition-fast;
+    margin-top: variables.$spacing-md;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: variables.$shadow-md;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

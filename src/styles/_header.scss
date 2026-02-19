@@ -1,0 +1,14 @@
+@use './variables';
+
+.header {
+    background: variables.$header-gradient;
+    color: variables.$color-text-white;
+    padding: variables.$spacing-2xl;
+    text-align: center;
+
+    h1 {
+        font-style: 2em;
+        margin-bottom: variables.$spacing-md;
+        font-weight: 700;
+    }
+}

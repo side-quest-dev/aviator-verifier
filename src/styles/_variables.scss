@@ -1,0 +1,48 @@
+// Colors
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$header-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+$result-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+$color-primary: #667eea;
+$color-secondary: #764ba2;
+$color-success: #4caf50;
+$color-error: #f44336;
+$color-warning: #ffc107;
+$color-info: #2196f3;
+
+$color-text-dark: #333;
+$color-text-light: #555;
+$color-text-white: #fff;
+
+$color-border: #e0e0e0;
+$color-bg-white: #fff;
+$color-bg-light: #f5f7fa;
+$color-bg-yellow: #fff3cd;
+$color-bg-blue: #e3f2fd;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 8px;
+$spacing-md: 10px;
+$spacing-lg: 15px;
+$spacing-xl: 20px;
+$spacing-2xl: 30px;
+
+// Border Radius
+$radius-sm: 5px;
+$radius-md: 10px;
+$radius-lg: 15px;
+$radius-xl: 20px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 10px 20px rgba(102, 126, 234, 0.3);
+$shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-normal: 0.3s;
+
+// Fonts
+$font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-mono: 'Courier New', monospace;

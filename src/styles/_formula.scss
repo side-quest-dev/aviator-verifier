@@ -1,0 +1,42 @@
+@use './variables';
+
+.formula-box {
+    background: variables.$color-bg-yellow;
+    border-left: 4px solid variables.$color-warning;
+    padding: variables.$spacing-xl;
+    border-radius: variables.$radius-md;
+    margin-top: variables.$spacing-xl;
+
+    h4 {
+        color: #856404;
+        margin-bottom: variables.$spacing-md;
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    .formula-steps {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$spacing-md;
+
+        code {
+            display: block;
+            background-color: variables.$color-bg-white;
+            padding: variables.$spacing-md;
+            border-radius: variables.$radius-sm;
+            font-family: variables.$font-mono;
+            color: #d63384;
+            font-size: 0.9em;
+        }
+    }
+
+    .formula-note {
+        margin-top: variables.$spacing-lg;
+        color: #856404;
+        line-height: 1.6;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
