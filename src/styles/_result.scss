@@ -4,6 +4,7 @@
     margin-top: variables.$spacing-2xl;
     padding: 25px;
     background: variables.$result-gradient;
+    border: 1px solid variables.$color-border;
     border-radius: variables.$radius-lg;
     border-left: 5px solid variables.$color-success;
     animation: slideIn variables.$transition-normal ease;
@@ -21,11 +22,12 @@
         color: variables.$color-success;
         text-align: center;
         margin: variables.$spacing-xl 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 0 0 24px rgba(variables.$color-accent-teal, 0.35);
     }
 
     .details {
-        background: variables.$color-bg-white;
+        background: variables.$color-bg-secondary;
+        border: 1px solid variables.$color-border;
         padding: variables.$spacing-xl;
         border-radius: variables.$radius-md;
         margin-top: variables.$spacing-lg;

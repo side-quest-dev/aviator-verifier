@@ -10,7 +10,7 @@
     label {
         display: block;
         margin-bottom: variables.$spacing-xl;
-        color: variables.$color-text-dark;
+        color: variables.$color-text-light;
         font-weight: 600;
         font-size: 0.9em;
     }
@@ -18,20 +18,28 @@
     input {
         width: 100%;
         padding: 12px variables.$spacing-lg;
-        border: 2px solid variables.$color-border;
+        background-color: variables.$color-bg-light;
+        color: variables.$color-text-dark;
+        border: 1px solid variables.$color-border;
         border-radius: variables.$radius-md;
         font-size: 1em;
         font-family: variables.$font-mono;
         transition:  all variables.$transition-normal;
 
+        &:hover {
+            border-color: variables.$color-border-hover;
+        }
+
         &:focus {
             outline: none;
             border-color: variables.$color-primary;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background-color: variables.$color-surface-hover;
+            box-shadow: variables.$shadow-md;
         }
 
         &::placeholder {
-            color: #999;
+            color: variables.$color-text-light;
+            opacity: 0.5;
         }
     }
 }
@@ -39,22 +47,29 @@
 .btn-verify {
     width: 100%;
     padding: variables.$spacing-lg;
-    background: variables.$primary-gradient;
-    color: variables.$color-text-white;
+    background: variables.$header-gradient;
+    color: variables.$color-bg-primary;
     border: none;
     border-radius: variables.$radius-md;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: transform variables.$transition-fast, box-shadow variables.$transition-fast;
     margin-top: variables.$spacing-md;
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: variables.$shadow-md;
+        box-shadow: 0 8px 24px rgba(variables.$color-accent-blue, 0.35);
     }
 
     &:active {
         transform: translateY(0);
     }
+}
+
+.form-error {
+    margin-top: variables.$spacing-md;
+    color: variables.$color-error;
+    font-size: 0.9em;
+    text-align: center;
 }

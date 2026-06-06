@@ -1,14 +1,27 @@
 @use './variables';
 
 .header {
-    background: variables.$header-gradient;
-    color: variables.$color-text-white;
+    background: variables.$color-bg-secondary;
+    border-bottom: 1px solid variables.$color-border;
+    color: variables.$color-text-dark;
     padding: variables.$spacing-2xl;
     text-align: center;
 
     h1 {
-        font-style: 2em;
+        font-size: 2em;
         margin-bottom: variables.$spacing-md;
         font-weight: 700;
+    }
+
+    .header-emoji {
+        margin-right: 0.4em;
+    }
+
+    // Gradient applies only to the title text so the emoji keeps its colors.
+    .header-title {
+        background: variables.$header-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
