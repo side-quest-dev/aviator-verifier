@@ -8,7 +8,7 @@ export function verifyAviatorRound(
     clientSeed3: string,
 ): VerificationResult {
 
-    const combined = `${serverSeed}${clientSeed1}${clientSeed2}${clientSeed3}`;
+    const combined = `${serverSeed.trim()}${clientSeed1.trim()}${clientSeed2.trim()}${clientSeed3.trim()}`;
 
     const hash = CryptoJS.SHA512(combined).toString();
 
