@@ -26,7 +26,7 @@ jobs:
         run: npm run build
       
       - name: Deploy to server
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action@ff85246acaad7bdce478db94a363cd2bf7c90345  # v1.0.0
         with:
           host: ${{ secrets.VM_IP }}
           username: ${{ secrets.VM_USER }}
@@ -38,7 +38,7 @@ jobs:
           overwrite: true
       
       - name: Restart services
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2  # v1.2.5
         with:
           host: ${{ secrets.VM_IP }}
           username: ${{ secrets.VM_USER }}
