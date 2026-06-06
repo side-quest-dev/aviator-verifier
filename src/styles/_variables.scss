@@ -1,24 +1,39 @@
-// Colors
-$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-$header-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-$result-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+// Colors — Infobit-inspired dark theme
 
-$color-primary: #667eea;
-$color-secondary: #764ba2;
-$color-success: #4caf50;
-$color-error: #f44336;
-$color-warning: #ffc107;
-$color-info: #2196f3;
+// Accents
+$color-accent-blue: #5b8dee;
+$color-accent-teal: #2dd4bf;
 
-$color-text-dark: #333;
-$color-text-light: #555;
-$color-text-white: #fff;
+$color-primary: $color-accent-blue;
+$color-secondary: $color-accent-teal;
+$color-success: #2dd4bf;
+$color-error: #f87171;
+$color-warning: #fbbf24;
+$color-info: #5b8dee;
 
-$color-border: #e0e0e0;
-$color-bg-white: #fff;
-$color-bg-light: #f5f7fa;
-$color-bg-yellow: #fff3cd;
-$color-bg-blue: #e3f2fd;
+// Gradients
+$primary-gradient: linear-gradient(135deg, #080809 0%, #0e0f15 100%); // Page background
+$header-gradient: linear-gradient(135deg, #5b8dee 0%, #2dd4bf 100%); // Accent (gradient text / lines)
+$result-gradient: linear-gradient(135deg, #15161d 0%, #1e1f27 100%); // Elevated surface
+
+// Text
+$color-text-dark: #f2f2f3; // Primary text (on dark surfaces)
+$color-text-light: #a0a0b2; // Secondary / muted text
+$color-text-white: #f2f2f3;
+
+// Backgrounds & surfaces
+$color-bg-primary: #080809; // Base app background
+$color-bg-secondary: #0e0f15; // Panel background
+$color-bg-white: #15161d; // Cards / containers (renamed semantics: surface)
+$color-bg-light: #0e0f15; // Subtle panel fill
+$color-surface-hover: #1e1f27; // Hover / elevated surface
+
+$color-border: #242530; // Default border
+$color-border-hover: #313340; // Hover / active border
+
+// Tinted fills
+$color-bg-yellow: rgba(251, 191, 36, 0.08); // Warning tint (formula box)
+$color-bg-blue: rgba(91, 141, 238, 0.09); // Info tint
 
 // Spacing
 $spacing-xs: 5px;
@@ -29,20 +44,20 @@ $spacing-xl: 20px;
 $spacing-2xl: 30px;
 
 // Border Radius
-$radius-sm: 5px;
-$radius-md: 10px;
-$radius-lg: 15px;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
 $radius-xl: 20px;
 
 // Shadows
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 10px 20px rgba(102, 126, 234, 0.3);
-$shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 0 0 3px rgba(91, 141, 238, 0.12);
+$shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
 
 // Transitions
-$transition-fast: 0.2s;
-$transition-normal: 0.3s;
+$transition-fast: 0.15s ease;
+$transition-normal: 0.25s ease;
 
 // Fonts
-$font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$font-mono: 'Courier New', monospace;
+$font-main: 'DM Sans', system-ui, 'Segoe UI', Tahoma, sans-serif;
+$font-mono: 'SF Mono', 'JetBrains Mono', 'Courier New', monospace;

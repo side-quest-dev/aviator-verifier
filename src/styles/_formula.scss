@@ -8,7 +8,7 @@
     margin-top: variables.$spacing-xl;
 
     h4 {
-        color: #856404;
+        color: variables.$color-warning;
         margin-bottom: variables.$spacing-md;
         font-weight: 700;
         font-size: 1.1em;
@@ -21,21 +21,23 @@
 
         code {
             display: block;
-            background-color: variables.$color-bg-white;
+            background-color: variables.$color-bg-secondary;
+            border: 1px solid variables.$color-border;
             padding: variables.$spacing-md;
             border-radius: variables.$radius-sm;
             font-family: variables.$font-mono;
-            color: #d63384;
+            color: variables.$color-accent-teal;
             font-size: 0.9em;
         }
     }
 
     .formula-note {
         margin-top: variables.$spacing-lg;
-        color: #856404;
+        color: variables.$color-text-light;
         line-height: 1.6;
 
         strong {
+            color: variables.$color-text-dark;
             font-weight: 700;
         }
     }

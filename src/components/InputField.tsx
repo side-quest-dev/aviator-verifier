@@ -8,10 +8,14 @@ const InputField: React.FC<InputFieldProps> = ({
     onKeyDown,
     placeholder
 }) => {
+    const id = React.useId();
+
     return (
         <div className="input-group">
-            <label>{label}</label>
-            <input 
+            <label htmlFor={id}>{label}</label>
+            <input
+                id={id}
+                name={id}
                 type="text"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}

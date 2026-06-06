@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import './App.css'
 import type { FormData, VerificationResult } from './types';
 import Header from './components/Header';
-import InputField from './components/InnputField';
+import InputField from './components/InputField';
 import ResultBox from './components/ResultBox';
 import FormulaBox from './components/FormulaBox';
 import './styles/main.scss';
@@ -16,7 +15,8 @@ function App() {
     clientSeed3: ''
   });
 
-  const [result, setResult] = useState<VerificationResult | null>();
+  const [result, setResult] = useState<VerificationResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleInputChange = (field: keyof FormData, value: string): void => {
     setFormData(prev => ({
@@ -28,10 +28,13 @@ function App() {
   const handleVerify = (): void => {
     const { serverSeed, clientSeed1, clientSeed2, clientSeed3 } = formData;
 
-    if ( !serverSeed || !clientSeed1 || !clientSeed2 || !clientSeed3) {
-      alert('Please fill all fields!');
+    if (!serverSeed.trim() || !clientSeed1.trim() || !clientSeed2.trim() || !clientSeed3.trim()) {
+      setError('Please fill in all fields.');
+      setResult(null);
       return;
     }
+
+    setError(null);
 
     const verificationResult = verifyAviatorRound(
       serverSeed,
@@ -45,7 +48,7 @@ function App() {
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === 'Enter') {
-      
+      handleVerify();
     }
   }
 
@@ -91,6 +94,8 @@ function App() {
             <button className='btn-verify' onClick={handleVerify}>
               🔍 Verify Round
             </button>
+
+            {error && <p className="form-error" role="alert">{error}</p>}
 
             {result && <ResultBox result={result} /> }
 

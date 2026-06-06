@@ -11,6 +11,7 @@
 }
 
 #root {
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -20,6 +21,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
+    background: variables.$color-bg-primary;
+    color: variables.$color-text-dark;
 }
 
 .app {
@@ -32,6 +35,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background-color: variables.$color-bg-white;
+    border: 1px solid variables.$color-border;
     border-radius: variables.$radius-xl;
     box-shadow: variables.$shadow-lg;
     overflow: hidden;
